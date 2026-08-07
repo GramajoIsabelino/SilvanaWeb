@@ -101,7 +101,6 @@ main {
 }
 
 .hero-text,
-.section p,
 .card p,
 .panel p {
   font-size: 1rem;
@@ -260,6 +259,119 @@ main {
 
 
 
+.editorial-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #e8dcc8;
+  /* color base */
+}
+
+
+.editorial-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* .editorial-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+} */
+
+.editorial-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.clean-list {
+  list-style-type: none !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.clean-list li {
+  list-style: none !important;
+}
+
+/* .clean-list li::before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  color: hsl(0, 0%, 0%);
+} */
+
+.editorial-bg {
+  position: absolute;
+  /* background-size: cover; */
+  /* background-position: center; */
+  background-attachment: fixed;
+  border-radius: 24px;
+  inset: 0;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  filter: blur(2px);
+  z-index: 0;
+
+  /* position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(2px);
+  opacity: 0.4; */
+
+
+}
+
+
+.editorial-text {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -356,8 +468,6 @@ main {
   .list {
     list-style: none;
   }
-
-
 
 
 }

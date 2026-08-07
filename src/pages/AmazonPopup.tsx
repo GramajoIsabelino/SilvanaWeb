@@ -1,5 +1,8 @@
 
 
+
+import logoEditorial from './images/Logo_horizontal.jpeg';
+
 export default function PublicarAmazonModal({ onClose }: { onClose: () => void }) {
 
 
@@ -90,7 +93,7 @@ export default function PublicarAmazonModal({ onClose }: { onClose: () => void }
                             </p>
                             <div className="flex items-center gap-3 mb-3">
                                 <img
-                                    src="images/hero/Logo_horizontal.jpeg"
+                                    src={logoEditorial}
                                     alt="Marconi Publishing"
                                     className="logoEditorial"
                                 />
