@@ -1,8 +1,8 @@
 const links = [
   { label: 'Home', href: '#home' },
-  { label: 'Sobre mí', href: '#about' },
+  // { label: 'Sobre mí', href: '#about' },
   { label: 'Libros', href: '#libros' },
-  { label: 'Documental', href: '#documental' },
+  // { label: 'Documental', href: '#documental' },
   { label: 'Editorial', href: '#editorial' },
   { label: 'Prensa', href: '#prensa' },
   { label: 'Novedades', href: '#novedades' },

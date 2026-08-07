@@ -24,6 +24,10 @@ export function HomePage() {
       <Navbar />
       <Hero />
 
+
+
+
+
       <section className="section" id="libros">
         <div className="section-heading">
           <p className="eyebrow">Últimos libros</p>
@@ -32,8 +36,8 @@ export function HomePage() {
         <div className="book-grid">
           {featuredBooks.map((book) => (
             <article className="card book-card" key={book.id}>
-              <img src={book.coverImage} alt={`Portada de ${book.title}`} />
-              <div className="card-body" onClick={() => window.open(book.link, '_blank')}>
+              <img src={book.coverImage} alt={`Portada de ${book.title}`} onClick={() => window.open(book.link, '_blank')} />
+              <div className="card-body" onClick={() => window.open(book.link, '_blank')} >
                 <p className="card-meta">{book.year}</p>
                 <h3>{book.title}</h3>
                 <p>{book.blurb}</p>
@@ -42,8 +46,6 @@ export function HomePage() {
           ))}
         </div>
       </section>
-
-
 
       <EditorialPage />
 
@@ -67,7 +69,6 @@ export function HomePage() {
 
 
 
-        // NOTICIAS
       <section className="section" id="novedades">
         <div className="section-heading">
           <p className="eyebrow">Últimas noticias</p>
@@ -83,6 +84,7 @@ export function HomePage() {
           ))}
         </div>
       </section>
+
 
       <section className="section" id="prensa">
         <div className="section-heading">
@@ -100,6 +102,8 @@ export function HomePage() {
           ))}
         </div>
       </section>
+
+
 
       <section className="section" id="contacto">
         <div className="section-heading">

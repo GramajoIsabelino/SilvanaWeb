@@ -3,10 +3,9 @@ export function Hero() {
         <section className="hero-section" id="home">
             <div className="hero-copy">
                 <p className="eyebrow">Escritora • Narradora • Observadora</p>
-                <h1>La voz que aprende a nombrar el mundo.</h1>
+                <h1>Penas del corazón que duran y florecen.</h1>
                 <p className="hero-text">
-                    Novelas, ensayos y conversaciones sobre memoria, identidad y la escritura
-                    como forma de cuidado.
+                    Una escritura atravesada por la memoria, la violencia, la supervivencia y las historias que muchas veces permanecen en silencio.
                 </p>
                 <div className="hero-actions">
                     <a href="#libros" className="button button-primary">
