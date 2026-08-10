@@ -1,3 +1,5 @@
+import FotoHero from '../pages/images/HeroImage.jpeg';
+
 export function Hero() {
     return (
         <section className="hero-section" id="home">
@@ -18,7 +20,7 @@ export function Hero() {
             </div>
             <div className="hero-media">
                 <img
-                    src="src/pages/images/HeroImage.jpeg"
+                    src={FotoHero}
                     alt="Retrato editorial de la escritora"
                 />
             </div>
