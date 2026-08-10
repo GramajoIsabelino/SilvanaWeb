@@ -18,7 +18,7 @@ export function Hero() {
             </div>
             <div className="hero-media">
                 <img
-                    src="/images/hero/hero.jpg"
+                    src="src/pages/images/HeroImage.jpeg"
                     alt="Retrato editorial de la escritora"
                 />
             </div>

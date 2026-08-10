@@ -293,6 +293,7 @@ main {
   position: relative;
   overflow: hidden;
   min-height: 500px;
+  border-radius: 24px;
 }
 
 .clean-list {
