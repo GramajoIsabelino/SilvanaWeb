@@ -5,7 +5,7 @@ export function Hero() {
         <section className="hero-section" id="home">
             <div className="hero-copy">
                 <p className="eyebrow">Escritora • Narradora • Observadora</p>
-                <h1>Penas del corazón que duran y florecen.</h1>
+                <h1>Donde termina el silencio, comienza la historia.</h1>
                 <p className="hero-text">
                     Una escritura atravesada por la memoria, la violencia, la supervivencia y las historias que muchas veces permanecen en silencio.
                 </p>

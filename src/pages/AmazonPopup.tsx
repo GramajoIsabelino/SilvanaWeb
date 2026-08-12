@@ -3,16 +3,17 @@
 
 import logoEditorial from './images/Logo_horizontal.jpeg';
 
-export default function PublicarAmazonModal({ onClose }: { onClose: () => void }) {
+// export default function PublicarAmazonModal({ onClose }: { onClose: () => void }) {
 
+export default function PublicarAmazonModal() {
 
     return (
         <>
             <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
                 <div className="bg-white p-8 rounded-xl relative">
-                    <button onClick={onClose} className="absolute top-2 right-2 cerrar-button">
+                    {/* <button onClick={onClose} className="absolute top-2 right-2 cerrar-button">
                         cerrar
-                    </button>
+                    </button> */}
 
                     <div className="p-8 md:p-10">
                         <h3 className="text-3xl font-bold text-gray-900 mb-2">
@@ -106,20 +107,18 @@ export default function PublicarAmazonModal({ onClose }: { onClose: () => void }
                         <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                             <div>
                                 <p className="text-sm text-gray-500">Contacto editorial</p>
+
+                                <h3>marconipublishing@gmail.com</h3>
+
                                 <a
-                                    href="mailto:marconipublishing@gmail.com"
-                                    className="text-lg font-medium text-black hover:underline"
+                                    href="mailto:marconipublishing@gmail.com?subject=Consulta sobre publicación en Amazon"
+                                    className="buy-button"
                                 >
-                                    marconipublishing@gmail.com
+
+
+                                    Quiero publicar mi libro
                                 </a>
                             </div>
-
-                            <a
-                                href="mailto:marconipublishing@gmail.com?subject=Consulta sobre publicación en Amazon"
-                                className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-black text-white hover:bg-gray-800 transition"
-                            >
-                                Quiero publicar mi libro
-                            </a>
                         </div>
                     </div>
                 </div>

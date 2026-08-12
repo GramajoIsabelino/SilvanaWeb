@@ -6,18 +6,24 @@ import { Hero } from '../components/Hero'
 import { Navbar } from '../components/Navbar'
 import { interviews } from '../../data/interviews'
 import { EditorialPage } from './EditorialPage'
+import { BuyButton } from '../components/BuyButton'
+import { useState } from 'react'
 
 
 
 
 const featuredBooks = books.slice(0, 3)
 const latestNews = news.slice(0, 3)
-const lastinterviews = interviews.slice(0, 3)
+// const lastinterviews = interviews.slice(0, 3)
 
 
 export function HomePage() {
 
+  const [AllInterview, setAllInterview] = useState(false)
 
+  const visibleInterviews = AllInterview
+    ? interviews
+    : interviews.slice(0, 3)
 
   return (
     <main>
@@ -41,6 +47,7 @@ export function HomePage() {
                 <p className="card-meta">{book.year}</p>
                 <h3>{book.title}</h3>
                 <p>{book.blurb}</p>
+                <BuyButton url={book.link} />
               </div>
             </article>
           ))}
@@ -92,7 +99,7 @@ export function HomePage() {
           <h2>Conversaciones que revelan la fuerza de la palabra.</h2>
         </div>
         <div className="interviews-grid" >
-          {lastinterviews.map((interview) => (
+          {visibleInterviews.map((interview) => (
             // const url = {interview.link}
             <article className="card" key={interview.id} onClick={() => window.open(interview.link, '_blank')}>
               <p className="card-meta">{interview.publication}</p>
@@ -100,6 +107,15 @@ export function HomePage() {
               <p>{interview.excerpt}</p>
             </article>
           ))}
+          <div className="button-container">
+            <button
+              className="button button-primary"
+              onClick={() => setAllInterview(!AllInterview)}>
+              <a>
+                {AllInterview ? "Ver menos" : "Ver más"}
+              </a>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -110,9 +126,17 @@ export function HomePage() {
           <p className="eyebrow">Contacto</p>
           <h2>Hablemos de libros, entrevistas o nuevas colaboraciones.</h2>
         </div>
-        <a href="mailto:contacto@silvana.com" className="button button-primary">
-          contacto@silvana.com
-        </a>
+        <div>
+          <a href="mailto:contacto@silvana.com" className="button button-primary">
+            contacto@silvana.com
+          </a>
+        </div>
+
+        <div>
+          <a href="marconipublishing@gmail.com" className="button button-primary">
+            marconipublishing@gmail.com
+          </a>
+        </div>
       </section>
 
       <Footer />

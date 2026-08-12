@@ -30,6 +30,10 @@ export function EditorialPage() {
 
   const [mostrarPopup, setMostrarPopup] = useState(false);
 
+  const mostrarEditorial = mostrarPopup
+    ? true
+    : false
+
   return (
     <section className="section"
       id="editorial">
@@ -108,12 +112,13 @@ export function EditorialPage() {
       </section>
       <div className="button-container">
         <button className="button button-primary">
-          <a onClick={() => setMostrarPopup(true)} >
+          <a onClick={() => setMostrarPopup(!mostrarEditorial)} >
             Ventajas de publicar tu libro en Amazon
           </a>
+
         </button>
       </div>
-      {mostrarPopup && <AmazonPopup onClose={() => setMostrarPopup(false)} />}
+      {mostrarEditorial && <AmazonPopup />}
     </section>
   );
 }
