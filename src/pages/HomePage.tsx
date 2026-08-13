@@ -133,7 +133,8 @@ export function HomePage() {
         </div>
 
         <div>
-          <a href="mailito:marconipublishing@gmail.com" className="button button-primary">
+          {/* <a href="mailito:marconipublishing@gmail.com" className="button button-primary"> */}
+          <a href="mailto:marconipublishing@gmail.com" className="button button-primary">
             marconipublishing@gmail.com
           </a>
         </div>
