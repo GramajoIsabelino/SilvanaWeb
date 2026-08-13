@@ -28,11 +28,6 @@ export function HomePage() {
   return (
     <main>
       <Navbar />
-      <meta name="google-site-verification" content="-pdMM3xPEEqvkbq3DvRhl233WcWz-_E2KKi3jw0aabA" />
-
-
-
-
 
       <section className="section" id="libros">
         <div className="section-heading">
