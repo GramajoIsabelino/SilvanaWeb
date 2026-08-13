@@ -1,9 +1,13 @@
 import FotoHero from '../pages/images/HeroImage.jpeg';
+import firmaImag from '../pages/images/FirmaRgb.png'
 
 export function Hero() {
     return (
         <section className="hero-section" id="home">
             <div className="hero-copy">
+                <img src={firmaImag}>
+
+                </img>
                 <p className="eyebrow">Escritora • Narradora • Observadora</p>
                 <h1>Donde termina el silencio, comienza la historia.</h1>
                 <p className="hero-text">

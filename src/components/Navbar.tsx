@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <header className="site-header">
       <a className="brand" href="#home">
-        Silvana
+        Silvana Marconi
       </a>
       <nav aria-label="Navegación principal">
         <ul className="nav-list">
