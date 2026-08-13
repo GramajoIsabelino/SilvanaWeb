@@ -12,7 +12,7 @@ const links = [
 export function Navbar() {
   return (
     <header className="site-header">
-      <meta name="google-site-verification" content="-pdMM3xPEEqvkbq3DvRhl233WcWz-_E2KKi3jw0aabA" />
+
       <a className="brand" href="#home">
         Silvana Marconi
       </a>
