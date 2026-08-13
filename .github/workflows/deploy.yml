@@ -1,0 +1,23 @@
+name: Deploy Isma
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/gramajo/sites/SilvanaWeb
+            git pull
+            docker compose -f /home/gramajo/compose.yaml build silvana
+            docker compose -f /home/gramajo/compose.yaml up -d silvana
