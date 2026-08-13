@@ -28,7 +28,7 @@ export function HomePage() {
   return (
     <main>
       <Navbar />
-      <Hero meta name="google-site-verification" content="-pdMM3xPEEqvkbq3DvRhl233WcWz-_E2KKi3jw0aabA" />
+      <meta name="google-site-verification" content="-pdMM3xPEEqvkbq3DvRhl233WcWz-_E2KKi3jw0aabA" />
 
 
 
