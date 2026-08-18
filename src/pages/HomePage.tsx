@@ -29,6 +29,8 @@ export function HomePage() {
     <main>
       <Navbar />
 
+      <Hero />
+
       <section className="section" id="libros">
         <div className="section-heading">
           <p className="eyebrow">Últimos libros</p>
@@ -37,7 +39,10 @@ export function HomePage() {
         <div className="book-grid">
           {featuredBooks.map((book) => (
             <article className="card book-card" key={book.id}>
-              <img src={book.coverImage} alt={`Portada de ${book.title}`} onClick={() => window.open(book.link, '_blank')} />
+              <img src={book.coverImage}
+                alt={`Portada de ${book.title} Silvana Marconi, escritora uruguaya"`}
+                onClick={() => window.open(book.link, '_blank')}
+              />
               <div className="card-body" onClick={() => window.open(book.link, '_blank')} >
                 <p className="card-meta">{book.year}</p>
                 <h3>{book.title}</h3>

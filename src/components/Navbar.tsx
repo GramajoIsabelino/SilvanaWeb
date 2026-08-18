@@ -16,6 +16,9 @@ export function Navbar() {
       <a className="brand" href="#home">
         Silvana Marconi
       </a>
+
+      <title className="brand">Silvana Marconi | Escritora y autora</title>
+
       <nav aria-label="Navegación principal">
         <ul className="nav-list">
           {links.map((link) => (
