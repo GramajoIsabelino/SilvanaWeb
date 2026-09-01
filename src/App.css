@@ -417,90 +417,128 @@ main {
 
 
 
-
-
-
-
 @media (max-width: 900px) {
+  main {
+    padding: 0 18px 48px;
+  }
 
-  .hero-section,
-  .split-section,
+  .site-header,
+  .site-footer,
   .contact-section {
-    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero-section,
+  .split-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
   }
 
   .book-grid,
   .news-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-copy h1,
+  .section-heading h2,
+  .split-section h2,
+  .contact-section h2 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .site-footer {
+    gap: 8px;
+  }
+
+  .editorial-section {
+    min-height: 360px;
+  }
 }
 
 @media (max-width: 700px) {
   main {
-    padding: 0 16px 48px;
+    padding: 0 16px 40px;
   }
 
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+    padding-top: 18px;
+    gap: 10px;
+  }
+
+  .brand {
+    letter-spacing: 0.12em;
+    font-size: 1rem;
   }
 
   .nav-list {
-    gap: 10px 12px;
+    gap: 8px 10px;
+  }
+
+  .nav-list a {
+    font-size: 0.82rem;
   }
 
   .hero-section {
-    padding-top: 24px;
+    padding: 20px 0 32px;
   }
 
-
-  .panel-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: #444;
-    line-height: 1.8;
+  .eyebrow {
+    letter-spacing: 0.18em;
+    font-size: 0.68rem;
   }
 
-  .section-title {
-    margin-top: 1.5rem;
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #111;
-    border-left: 4px solid #b68c3a;
-    padding-left: 0.75rem;
+  .hero-copy h1,
+  .section-heading h2,
+  .split-section h2,
+  .contact-section h2 {
+    line-height: 1.1;
+    margin-bottom: 12px;
   }
 
-  .subsection-title {
-    margin-top: 0.5rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #222;
+  .section {
+    padding: 28px 0;
   }
 
-  .service-list {
-    margin: 0;
-    /* padding-left: 1.25rem; */
-    list-style: none;
-    align-items: flex-start;
+  .card,
+  .panel {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .contact-section {
+    padding: 24px 0 12px;
+  }
+
+  .editorial-section {
+    min-height: 300px;
+  }
+
+  .cerrar-button {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+
+  .buy-button {
+    width: 100%;
   }
 
   .service-list li {
+    padding: 0;
     margin-bottom: 0.5rem;
-    list-style: none;
-    padding: 100px;
   }
-
-  .closing-text {
-    margin-top: 1.5rem;
-    font-weight: 500;
-  }
-
-  .list {
-    list-style: none;
-  }
-
-
 }
