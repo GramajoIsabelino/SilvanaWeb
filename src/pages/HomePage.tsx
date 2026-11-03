@@ -8,11 +8,14 @@ import { interviews } from '../../data/interviews'
 import { EditorialPage } from './EditorialPage'
 import { BuyButton } from '../components/BuyButton'
 import { useState } from 'react'
+import { PromoPopup } from '../components/PromoPopup'
+import { isPromoActive, promo } from '../../data/promo'
 
 
 
 
 const featuredBooks = books.slice(0, 3)
+const promoActive = isPromoActive()
 const latestNews = news.slice(0, 3)
 // const lastinterviews = interviews.slice(0, 3)
 
@@ -27,6 +30,7 @@ export function HomePage() {
 
   return (
     <main>
+      <PromoPopup />
       <Navbar />
 
       <Hero />
@@ -38,13 +42,23 @@ export function HomePage() {
         </div>
         <div className="book-grid">
           {featuredBooks.map((book) => (
-            <article className="card book-card" key={book.id}>
+            <article className={`card book-card${promoActive ? ' book-card--sale' : ''}`} key={book.id}>
+              {promoActive && (
+                <span className="sale-badge" aria-label={`Oferta: ${promo.discount}% de descuento`}>
+                  -{promo.discount}%
+                </span>
+              )}
               <img src={book.coverImage}
                 alt={`Portada de ${book.title} Silvana Marconi, escritora uruguaya"`}
                 onClick={() => window.open(book.link, '_blank')}
               />
               <div className="card-body" onClick={() => window.open(book.link, '_blank')} >
                 <p className="card-meta">{book.year}</p>
+                {promoActive && (
+                  <p className="sale-tag">
+                    En oferta · {promo.discount}% OFF
+                  </p>
+                )}
                 <h3>{book.title}</h3>
                 <p>{book.blurb}</p>
                 <BuyButton url={book.link} />
