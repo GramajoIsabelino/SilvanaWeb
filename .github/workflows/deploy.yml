@@ -17,6 +17,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -e
             cd /home/gramajo/sites/SilvanaWeb
             git pull
             docker compose -f /home/gramajo/compose.yaml build silvana
